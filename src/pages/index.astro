@@ -1,104 +1,47 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
-import article_topimage_bryllup from "../assets/images/article_topimage_bryllup.jpg";
+import headerbryllup from "../assets/images/headerbryllup.jpg";
+import vielserchart from "../assets/images/vielserchart.svg";
 ---
 
 <MainLayout>
-<section class="w-full h-auto bg-cover bg-center" style="background-image:">
-                <Image src={article_topimage_bryllup.jpg} alt="Header billede med to kendte blues kunstnere" />
-                <div class="absolute pt:0 lg:pt-24 inset-0 flex items-start justify-start text-center">
-                    <h1 class="text-orange-300 text-3xl md:text-5xl lg:text-7xl font-bold">Historien om Blues: Musikken der Formede Generationer</h1>
-                </div>
-</section>
+    <section style="background-image:">
+        <Image class="w-full h-1/2 bg-center bg-no-repeat bg-cover" src={headerbryllup} alt="Vielsesringe i nogen hænder" />
+            <div class="absolute lg:pt-24 inset-0 flex items-start justify-center text-center">
+                <h1 class="text-grey-300 text-3xl md:text-5xl lg:text-7xl font-bold">Ændringer i Vielsesvalg<br/><span class="block mt-4">Under og Efter Corona-pandemien</span></h1>
+            </div>
+    </section>
 
-<article class="grid mx-auto container gap-8 pt-8 prose">
-        <h2>1)Hvad er Blues?</h2>
+<article class="grid justify-items-center mx-auto container gap-4 pt-4">
+    <div class="prose">
+        <h2 class="pt-14">Ændringer i Vielsesvalg fra 2019 til 2022</h2>
 
-        <p>Blues er en musikgenre, der opstod i de afroamerikanske samfund i USA i slutningen af 1800-tallet.
-            Den er kendetegnet ved sin følelsesladede vokal, karakteristiske guitarspil og dybe fortællinger om livets udfordringer.
-            Blues har haft en betydelig indflydelse på mange moderne musikgenrer, herunder rock, jazz og hip-hop.</p>
+        <p>I de seneste år har vielsespræferencer været under markante forandringer som følge af pandemien.
+            I 2020 oplevede kirkelige vielser et betydeligt fald, sandsynligvis på grund af restriktioner og sikkerhedsforanstaltninger.
+            Efterhånden som restriktionerne lettede, begyndte flere par at vende tilbage til kirkelige bryllupper,
+            men antallet forblev stadig under niveauet før pandemien.
+            </p>
 
-        
-        <ul>
-            <p class="font-bold mb-0 p-0">Karakteristika ved Blues</p>
-            <li>12-bar blues: En musikalsk struktur, der er grundlæggende for mange bluesnumre.</li>
-            <li>Blue notes: Toner, der spilles på en lavere frekvens for at udtrykke følelsesmæssig dybde.</li>
-            <li>Call and response: En interaktiv form for kommunikation mellem sanger og instrumenter.</li>
-        </ul>
+        <p>I kontrast til dette har borgerlige vielser vundet stigende popularitet. Mange par ser nu borgerlige vielser som en mere fleksibel løsning,
+hvilket har resulteret i en markant stigning i disse vielser i 2021 og 2022.
+Samtidig har vielser i udlandet og uoplyste vielser holdt sig på et lavt niveau, men viser en svag stigning. Dette tyder på,
+at flere par er begyndt at overveje alternative bryllupsformer, hvilket afspejler en ændring i,
+hvordan folk planlægger deres vielser i en post-pandemisk verden.</p>
+</div>
 
-        <!-- <Image src={section1} alt="Blues album med en trompet" /> -->
+          <div class="w-1/2 h-auto pt-4">
+                <Image class="w-full h-auto" src={vielserchart} alt="oversigt over coronas påvirkelse på vielses" />
+                <p>Caption... <span class="italic">Lavet i Figma.</span></p>
+         </div>
 
-        <hr>
-
-        <h2> 2) Oprindelse og Historisk Baggrund</h2>
-
-        <p>
-            Blues-genren har sine rødder i de afroamerikanske samfund, der opstod efter borgerkrigen i USA.
-            Musikken blev skabt som et svar på de sociale og økonomiske udfordringer, som mange afroamerikanere stod over for.
-        </p>
-
-        <ul>
-            <li>Oprindelse i arbejds- og spiritualsange fra slaveriet.</li>
-            <li>Udvikling i afroamerikanske samfund, især i Mississippi Delta.</li>
-        </ul>
-
-        <!-- <Image src={section2} alt="Mississippi Delta" /> -->
-
-        <hr>
-
-        <h2>3) Bluesens Udvikling: Fra Delta til Chicago</h2>
-
-        <p>
-           Efterhånden som afroamerikanere migrerede nordpå i begyndelsen af det 20. århundrede,
-           udviklede blues sig og elektrificerede i byer som Chicago. Denne transformation bragte nye lyde og stilarter ind i genren.
-        </p>
-
-        <ul>
-            <li>Delta Blues: En simpel og rå form, der ofte inkluderer akustisk guitar og vokal.</li>
-            <li>Chicago Blues: Elektrificeret version med brug af instrumenter som harmonika og trommer.</li>
-        </ul>
-        <!-- <Image src={section3} alt="Delta Blues Museum" /> -->
-
-        <hr>
-        <h2>4) Ikoniske Blues-Musikere</h2>
-
-        <p>
-            Blues har givet os nogle af de mest indflydelsesrige musikere i musikhistorien.
-            Kunstnere som Robert Johnson, B.B. King og Muddy Waters har sat deres præg på genren og inspireret generationer af musikere.
-        </p>
-
-        <ul>
-            <li>Robert Johnson: Kendt for sin unikke guitarteknik og mystiske liv; sange som "Cross Road Blues."</li>
-            <li>B.B. King: "King of the Blues," berømt for sin guitar "Lucille" og sange som "The Thrill is Gone."</li>
-            <li>
-                Muddy Waters: En pioner inden for elektrisk blues; sange som "Hoochie Coochie Man."
-            </li>
-        </ul>
-
-        <div class="grid grid-cols-2 gap-4">
-
-			<!-- <Image src={section4a} alt="Robert Johnson" />
-            <Image src={section4b} alt="B.B. King By Gorupdebesanez - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=31039163" />
-            <Image src={section4c} alt="Muddy Waters By Lionel Decoster - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=74841798" /> -->
-
-        </div>
-        <hr>
-
-        <h2>3) Blues i Dag</h2>
-
-        <p>
-           Blues lever stadig i bedste velgående og fejres på festivaler verden over.
-           Nutidens kunstnere fortsætter med at trække på bluesens rødder og bringe genren ind i nye musikalske landskaber.
-        </p>
-
-        <ul>
-            <li>Festivaler: Chicago Blues Festival, New Orleans Jazz & Heritage Festival.</li>
-            <li>Moderne kunstnere: Gary Clark Jr., Joe Bonamassa, og mange flere, der holder bluesen levende.</li>
-        </ul>
-        <!-- <Image src={section5} alt="Chicago Blues Festival" /> -->
-
-        <hr>
-
+          <p class="prose pt-8 pb-[40px]">Den grå linje, der indikerer borgerlige vielser, viser en stigning.
+            I 2020 overgik antallet af borgerlige vielser kirkelige vielser,
+            og denne tendens fortsætter med en endnu stærkere stigning i 2021 og 2022. Dette tyder på,
+            at flere par ser borgerlige vielser som en mere fleksibel løsning under og efter pandemien,
+            hvor kirker stadig kunne have begrænsninger. Den orange linje, der repræsenterer vielser i udlandet og uoplyste vielser,
+            har holdt sig på et relativt lavt niveau, men viser en stabil stigning fra 2020 til 2022. Dette indikerer,
+            at nogle par begynder at overveje alternative muligheder i en usikker tid.
+            </p>
     </article>
 </MainLayout>
